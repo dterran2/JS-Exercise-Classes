@@ -41,8 +41,24 @@ class Airplane {
 */
 
 class Person {
-
+  constructor(attr){
+    this.name = attr.name;
+    this.age = attr.age;
+    this.stomach = [];
 }
+eat(someFood){
+  if (this.stomach.length < 10)
+  this.stomach.push(someFood);
+};
+poop(){
+  this.stomach = [];
+};
+toString(){
+  return `${this.name}, ${this.age}`;
+};
+
+let Mary = new Person('Mary', 50);
+console.log(Mary);
 
 /*
   TASK 2
@@ -59,8 +75,23 @@ class Person {
 */
 
 class Car {
-
+  constructor(attr){
+    this.model = attr.model;
+    this.milesPerGallon = attr.milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0;
+  }
+  fill(gallons){
+    this.tank += gallons;
+  }
+    drive(distance){
+      if (this.tank - (distance/this.milesPerGallon <= 0){
+        
+      }
+    }
 }
+
+
 
 /*
   TASK 3
